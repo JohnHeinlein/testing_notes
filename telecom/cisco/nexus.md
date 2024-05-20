@@ -1,7 +1,7 @@
 # Background information
 
 ### Break sequence
-`^C` = break into loader> prompt.
+`^C` = break into `loader>` prompt.
 `^]` and `^r` may also work for some models and under some circumstances. Not really sure.
 
 ### ACI vs NXOS
@@ -19,6 +19,10 @@ Image type can be determine by dropping into the `loader>` prompt and checking t
   - `write erase`
   - `reload`
  - 
+> [!NOTE]
+> Some models will have a separate "kickstart" image that they will attempt to boot prior to the full image. Per page 2 of [this configuration guide](https://www.cisco.com/en/US/docs/storage/san_switches/mds9000/sw/rel_1_x/1_0_2/san-os/configuration/guide/SwImage.pdf), the kickstart image just contains the kernel and basic drivers.
+> 
+> Some combo of `^C`,`^R`, or `^]` after the kickstart loads will break into the `switch(boot)#` prompt, from which you can run `write erase` as per above.
 
 ### ACI Spine/Leaf Reset procedure:
 - `^C` to drop to `loader>` prompt
@@ -36,6 +40,8 @@ Image type can be determine by dropping into the `loader>` prompt and checking t
 - `reload`
 
 Unit will boot into the `(none)#` prompt thereafter, indicating that it is waiting to join a larger fabric.
+
+
 
 # Additional info
 ## Virtual Device Context (VDC)
