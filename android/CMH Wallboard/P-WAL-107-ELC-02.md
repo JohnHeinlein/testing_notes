@@ -33,7 +33,7 @@ Data:
 - `rm -r /data/data/com.contextmediainc.system.synop`
 - `rm -r /data/data/com.contextmediainc.system.zygote`
 
-WiFi APs: `push <local-path-to-wpa-supplicant> <remote-path-to-wpa-supplicant>`
+WiFi APs: `push <local-path-to-wpa-supplicant> /system/etc/wifi/wpa-supplicant.conf`
 - No `nano` or `pico` on android to do it manually. Faster for mutiple units to just push a file anyway.
 
 Kill any other apps as necessary.
