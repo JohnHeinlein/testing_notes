@@ -20,6 +20,7 @@ Generally we could just install the APK through ADB, but we want a launcher to r
    1. `adb install <path/to/launcher.apk>`
    2. `adb shell`
    3. `root@rk3288:/ # cp /data/app/<launcher.apk> /system/priv-app/`
+   4. `root@rk3288:/ # chmod 664 /system/priv-app/<launcher.apk>`
 3. Remove custom Zygote MDM launcher
    1. `rm /system/priv-app/zygote_standalone.apk`
 
