@@ -27,7 +27,11 @@ May be necessary to disable Zygote first; `pm list packages | grep zygote` and `
 
 ## Remove CMH & Zygote apps / configs
 Cache: `/data/dalvik-cache/system@priv-app@zygote_standalone.apk@classes.dex`
+
 Data: `rm -r /data/data/com.contextmediainc.system.synop`
+
+WiFi APs: `rm /system/etc/wifi/wpa_supplicant.conf`
+
 Kill any other apps as necessary.
 
 ## TWRP & Google Play Services
