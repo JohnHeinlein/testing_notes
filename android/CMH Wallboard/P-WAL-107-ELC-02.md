@@ -28,9 +28,12 @@ May be necessary to disable Zygote first; `pm list packages | grep zygote` and `
 ## Remove CMH & Zygote apps / configs
 Cache: `/data/dalvik-cache/system@priv-app@zygote_standalone.apk@classes.dex`
 
-Data: `rm -r /data/data/com.contextmediainc.system.synop`
+Data: 
+- `rm -r /data/data/com.contextmediainc.system.synop`
+- `rm -r /data/data/com.contextmediainc.system.zygote`
 
-WiFi APs: `rm /system/etc/wifi/wpa_supplicant.conf`
+WiFi APs: `push <local-path-to-wpa-supplicant> <remote-path-to-wpa-supplicant>`
+- No `nano` or `pico` on android to do it manually. Faster for mutiple units to just push a file anyway.
 
 Kill any other apps as necessary.
 
