@@ -1,3 +1,5 @@
+*Written for P-WAL-107-ELC-02 32in Wall board*
+
 Based heavily on [this XDA forum post](https://xdaforums.com/t/unlocking-32-inch-wallboard-outcome-health.3936524/), with the TWRP image being sourced from a user and uploaded here for posterity.
 
 Also requires the ARM/4.4 version of [OpenGApps](https://opengapps.org/) to get Google Play Services functional.
