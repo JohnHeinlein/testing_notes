@@ -62,3 +62,19 @@ This will require that `recovery.img` and the `open_gapps-arm-4.4[...].zip` both
 Finally, run a normal factory reset through the android settings. With everything wiped, the unit should reboot to first-time setup and fall back to Nova Launcher, with google apps accessible. If this is confirmed, do one more factory reset and leave the device in OOB mode.
 
 Units may still be a little buggy; android 4 is VERY old and these weren't necessarily designed for this. This does bring it as close as we can to a stock Android tablet, though
+
+## Copy/Paste Shell Commands
+Flash recovery:
+```
+DEV=$(ls /dev/block/platform/*/by-name/recovery) && echo $DEV; dd of=$DEV if=/mnt/external_sd/recovery.img
+```
+
+Clear zygote data/cache:
+```
+rm -r /data/data/com.contextmediainc.system.zygote/ /data/dalvik-cache/system@priv-app@zygote_standalone.apk@classes.dex
+```
+
+Replace zygote as default launcher:
+```
+mount -o rw,remount /system && cp /data/app/com.teslacoilsw.launcher-1.apk /system/priv-app/ && chmod 664 /system/priv-app/com.teslacoilsw.launcher-1.apk && rm -r /system/priv-app/zygote_standalone.apk
+```
