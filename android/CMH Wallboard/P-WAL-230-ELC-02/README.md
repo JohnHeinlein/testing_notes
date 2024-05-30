@@ -9,10 +9,11 @@
 - Enable dev mode through settings
 
 ## Replace launcher & wipe app data
-- `adb install <path-to-launcher-apk` to load Nova Launcehr
+- `adb install <path-to-launcher-apk>` to load Nova Launcher
 - `adb shell`
 - `su`
 - `mount -o rw,remount /system` to allow changes to write-protected system parition
+  - `mv /data/data/<launcher> /system/priv-app/` to move Nova Launcher to persistent storage
 - `rm -r /system/priv-app/zygote1`
 - `rm -r /data/data/com.contextediainc.system.zygote` plus any other app data we don't want.
   - Might want to leave the `android.rockchip.update.servce` package and `com.elcld` packages alone, since they're the OEM and I'm not clear what these do.
