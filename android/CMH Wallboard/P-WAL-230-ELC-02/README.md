@@ -10,14 +10,14 @@
 
 ## Replace launcher & wipe app data
 - `adb install <path-to-launcher-apk>` to load Nova Launcher
-- `adb shell`
-- `su`
+- `adb shell` then `su` for root shell
 - `mount -o rw,remount /system` to allow changes to write-protected system parition
-  - `mv /data/data/<launcher> /system/priv-app/` to move Nova Launcher to persistent storage
-- `rm -r /system/priv-app/zygote1`
-- `rm -r /data/data/com.contextediainc.system.zygote` plus any other app data we don't want.
-  - Might want to leave the `android.rockchip.update.servce` package and `com.elcld` packages alone, since they're the OEM and I'm not clear what these do.
-- `rm -r /data/dalvik-cache/arm/system@priv-app@zygote1.apk`
+- `mv /data/app/com.teslacoilsw.launcher-1 /system/priv-app/` to move Nova Launcher to persistent storage
+- Remove Zygote MDM
+  - `rm -r /system/priv-app/zygote1`
+  - `rm -r /data/data/com.contextediainc.system.zygote` plus any other app data we don't want.
+    - Might want to leave the `android.rockchip.update.servce` package and `com.elcld` packages alone, since they're the OEM and I'm not clear what these do.
+  - `rm -r /data/dalvik-cache/arm/system@priv-app@zygote1.apk`
 
 ## Clear user data
 Should be typically safe to just nuke `rm -r /data/media/0/*`, as these are user files will be re-generated.
