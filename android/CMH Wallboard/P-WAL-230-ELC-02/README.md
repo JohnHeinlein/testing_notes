@@ -16,15 +16,19 @@
 - `mv /data/app/com.teslacoilsw.launcher-1 /system/priv-app/` to move Nova Launcher to persistent storage
 - Remove Zygote MDM
   - ```
-    rm -r /system/priv-app/zygote1 /data/data/com.contextmediainc.system.zygote /data/dalvik-cache/arm/system@priv-app@zygote1.apk /data/dalvik-cache/arm/system@priv-app@zygote_standalone.apk@classes.dex;
+    rm -r /system/priv-app/zygote1 /data/data/com.contextmediainc.system.zygote /data/dalvik-cache/arm/system@priv-app@zygote1.apk /data/dalvik-cache/arm/system@priv-app@zygote_standalone.apk@classes.dex /system/priv-app/zygote_standalone.apk;
     ```
+One-liner:
+```
+adb root; adb remount; adb shell mv /data/app/com.teslacoilsw.launcher-1 /system/priv-app/
+```
 
 
 
 ## Clear user data
-```
-cd /mnt/sdcard; rm -r ./multifunctionclock ./RVPlayer ./cmh ./Android/data/com.contextmediainc.system.zygote
-```
+- ```
+  cd /mnt/sdcard; rm -r ./multifunctionclock ./RVPlayer ./cmh ./Android/data/com.contextmediainc.system.zygote
+  ```
 > [!NOTE]
 > This device is symlinked to various other locations, `/data/media/0` should be the main device. Some links, like `/mnt/sdcard`, are not protected. Not very relevant here, but good to know in general.
 
@@ -39,7 +43,10 @@ cd /mnt/sdcard; rm -r ./multifunctionclock ./RVPlayer ./cmh ./Android/data/com.c
 ## Clear boot splashes
 
 ### Bootanimation.zip
-- `rm /system/media/bootanimation.zip`
+- ```
+  rm /system/media/bootanimation.zip
+  ```
+
 Can be replaced with a custom animation, or deleted to fall back to the stock android animation.
 
 ### Boot splash baked into kernel
