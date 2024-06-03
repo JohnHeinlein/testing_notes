@@ -16,7 +16,7 @@
 - `mv /data/app/com.teslacoilsw.launcher-1 /system/priv-app/` to move Nova Launcher to persistent storage
 - Remove Zygote MDM
   - ```
-    rm -r /system/priv-app/zygote1 /data/data/com.contextmediainc.system.zygote /data/dalvik-cache/arm/system@priv-app@zygote1.apk /data/dalvik-cache/arm/system@priv-app@zygote_standalone.apk@classes.dex /system/priv-app/zygote_standalone.apk;
+    rm -r /data/data/com.contextmediainc.system.zygote /data/dalvik-cache/arm/system@priv-app@zygote1.apk /data/dalvik-cache/arm/system@priv-app@zygote_standalone.apk@classes.dex /system/priv-app/zygote_standalone.apk;
     ```
 One-liner:
 ```
