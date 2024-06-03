@@ -1,4 +1,5 @@
-#Reset & patching instructions
+> [!NOTE]
+> Should also work for P-WAL-220-ELC-02; same device, smaller screen
 
 ## Enable debugging
 - Plug USB keyboard in BEFORE BOOT
@@ -17,13 +18,12 @@
   - ```
     rm -r /system/priv-app/zygote1 /data/data/com.contextmediainc.system.zygote /data/dalvik-cache/arm/system@priv-app@zygote1.apk /data/dalvik-cache/arm/system@priv-app@zygote_standalone.apk@classes.dex;
     ```
-  - Might want to leave the `android.rockchip.update.servce` package and `com.elcld` packages alone, since they're the OEM and I'm not clear what these do.
+
 
 
 ## Clear user data
-Should be typically safe to just nuke the user data partition, as these are user files will be re-generated.
 ```
-rm -r /mnt/sdcard/
+cd /mnt/sdcard; rm -r ./multifunctionclock ./RVPlayer ./cmh ./Android/data/com.contextmediainc.system.zygote
 ```
 (This device is symlinked to various other locations, `/data/media/0` should be the main FS)
 
