@@ -56,12 +56,11 @@ This is the most intesive step, as the static boot splash image is baked into th
       -  Bottom should read "Found One ADB Device"
    3) Click empty space to far right of "Boot" entry & select repacked img file
    ![load_boot_img](https://github.com/JohnHeinlein/testing_notes/assets/29853148/e9cdb447-d3e0-4cad-b442-37961d0bf739)
-   5) Click `Switch` to swap device into LOADER mode
+   5) Click `Switch` to swap device into LOADER mode. Device will reboot to a black screen, but will still be detected.
    ![switch_to_loader](https://github.com/JohnHeinlein/testing_notes/assets/29853148/78b501e4-12d5-42ff-9982-e18d74b4e42c)
-   7) Once in LOADER, click `Dev Partition` to populate address
+   7) Once in LOADER, click `Dev Partition` to populate memory addresses.
    ![dev partition](https://github.com/JohnHeinlein/testing_notes/assets/29853148/daa822bd-a870-4b94-9cba-c9a24b74b837)
    9) Check box next to `Boot` entry **ONLY**
       - This ensures that the firmware is only partially flashed
    ![partial_flash](https://github.com/JohnHeinlein/testing_notes/assets/29853148/cfff1032-48a8-4eef-acb8-9211136767b6)
    10) Click `Run` to flash. Device should reboot with the modified splash image.
-
