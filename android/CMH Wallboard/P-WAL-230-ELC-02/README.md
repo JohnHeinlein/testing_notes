@@ -15,9 +15,7 @@
 - `mv /data/app/com.teslacoilsw.launcher-1 /system/priv-app/` to move Nova Launcher to persistent storage
 - Remove Zygote MDM
   - ```
-    rm -r /system/priv-app/zygote1;
-    rm -r /data/data/com.contextediainc.system.zygote;
-    rm -r /data/dalvik-cache/arm/system@priv-app@zygote1.apk;
+    rm -r /system/priv-app/zygote1 /data/data/com.contextmediainc.system.zygote /data/dalvik-cache/arm/system@priv-app@zygote1.apk /data/dalvik-cache/arm/system@priv-app@zygote_standalone.apk@classes.dex;
     ```
   - Might want to leave the `android.rockchip.update.servce` package and `com.elcld` packages alone, since they're the OEM and I'm not clear what these do.
 
