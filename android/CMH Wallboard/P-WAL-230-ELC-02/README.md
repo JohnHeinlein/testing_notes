@@ -14,13 +14,19 @@
 - `mount -o rw,remount /system` to allow changes to write-protected system parition
 - `mv /data/app/com.teslacoilsw.launcher-1 /system/priv-app/` to move Nova Launcher to persistent storage
 - Remove Zygote MDM
-  - `rm -r /system/priv-app/zygote1`
-  - `rm -r /data/data/com.contextediainc.system.zygote` plus any other app data we don't want.
-    - Might want to leave the `android.rockchip.update.servce` package and `com.elcld` packages alone, since they're the OEM and I'm not clear what these do.
-  - `rm -r /data/dalvik-cache/arm/system@priv-app@zygote1.apk`
+  - ```
+    rm -r /system/priv-app/zygote1;
+    rm -r /data/data/com.contextediainc.system.zygote;
+    rm -r /data/dalvik-cache/arm/system@priv-app@zygote1.apk;
+    ```
+  - Might want to leave the `android.rockchip.update.servce` package and `com.elcld` packages alone, since they're the OEM and I'm not clear what these do.
 
 ## Clear user data
-Should be typically safe to just nuke `rm -r /data/media/0/*`, as these are user files will be re-generated.
+Should be typically safe to just nuke the user data partition, as these are user files will be re-generated.
+```
+rm -r /data/media/0/*
+```
+(This device is symlinked to various other locations, `/data/media/0` should be the main FS)
 
 ## Clear boot splashes
 
