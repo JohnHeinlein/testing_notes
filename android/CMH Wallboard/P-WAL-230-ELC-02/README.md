@@ -25,7 +25,8 @@
 ```
 cd /mnt/sdcard; rm -r ./multifunctionclock ./RVPlayer ./cmh ./Android/data/com.contextmediainc.system.zygote
 ```
-(This device is symlinked to various other locations, `/data/media/0` should be the main FS)
+> [!NOTE]
+> This device is symlinked to various other locations, `/data/media/0` should be the main device. Some links, like `/mnt/sdcard`, are not protected. Not very relevant here, but good to know in general.
 
 ## Wallpaper
 1. Push file to Pictures directory
