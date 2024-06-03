@@ -23,7 +23,7 @@
 ## Clear user data
 Should be typically safe to just nuke the user data partition, as these are user files will be re-generated.
 ```
-rm -r /data/media/0/*
+rm -r /mnt/sdcard/
 ```
 (This device is symlinked to various other locations, `/data/media/0` should be the main FS)
 
