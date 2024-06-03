@@ -1,4 +1,4 @@
-*Written for P-WAL-107-ELC-02 32in Wall board*
+(Purple Wallboards)
 
 Based heavily on [this XDA forum post](https://xdaforums.com/t/unlocking-32-inch-wallboard-outcome-health.3936524/), with the TWRP image being sourced from a user and uploaded here for posterity.
 
