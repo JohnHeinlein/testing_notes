@@ -21,12 +21,18 @@
     ```
   - Might want to leave the `android.rockchip.update.servce` package and `com.elcld` packages alone, since they're the OEM and I'm not clear what these do.
 
+
 ## Clear user data
 Should be typically safe to just nuke the user data partition, as these are user files will be re-generated.
 ```
 rm -r /data/media/0/*
 ```
 (This device is symlinked to various other locations, `/data/media/0` should be the main FS)
+
+## Wallpaper
+1. Push file to Pictures directory
+2. `.\adb push <path-to-img> /data/media/0/Pictures`
+3. Launch wallpaper changer: `am start -n com.teslacoilsw.launcher/com.android.launcher3.LauncherWallpaperPickerActivity`
 
 ## Clear boot splashes
 
