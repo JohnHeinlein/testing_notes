@@ -32,7 +32,10 @@ rm -r /data/media/0/*
 ## Wallpaper
 1. Push file to Pictures directory
 2. `.\adb push <path-to-img> /data/media/0/Pictures`
-3. Launch wallpaper changer: `am start -n com.teslacoilsw.launcher/com.android.launcher3.LauncherWallpaperPickerActivity`
+3. Launch wallpaper changer
+   - ```
+     am start -a android.intent.action.ATTACH_DATA -c android.intent.category.DEFAULT -d file:///data/media/0/Pictures/default_wallpaper.png -t 'image/*' -e mimeType 'image/*'
+     ```
 
 ## Clear boot splashes
 
