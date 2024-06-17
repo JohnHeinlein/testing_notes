@@ -18,7 +18,7 @@ Image type can be determine by dropping into the `loader>` prompt and checking t
 - `switch(boot)#` prompt
   - `write erase`
   - `reload`
- - 
+- Decline POAP and password prompts, then clean flash from within OS
 > [!NOTE]
 > Some models will have a separate "kickstart" image that they will attempt to boot prior to the full image. Per page 2 of [this configuration guide](https://www.cisco.com/en/US/docs/storage/san_switches/mds9000/sw/rel_1_x/1_0_2/san-os/configuration/guide/SwImage.pdf), the kickstart image just contains the kernel and basic drivers.
 > 
