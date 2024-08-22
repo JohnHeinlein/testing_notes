@@ -1,0 +1,46 @@
+Sanization
+  - Assets tags
+    - Stickers, engravings
+  - Configurations
+
+Restricted customers
+  - Carestream
+  - CXTec
+  - Walmart
+    - Oculus
+    - Lego
+
+Restricted item classes
+  - Medical printout
+
+Ops tutorial
+  - Asset ID
+  - SKU
+  - Type
+  - Product
+  - 
+
+Broad process flow (Flowchart)
+  - Ingress
+    - Dock
+    - Collection events
+    - Specific customers
+      - Business Sort
+  - Dismantle/Disposal
+    - LCD
+    - CRT
+    - Projector
+    - Battery
+    - Shred
+    - Debox?
+  - Processing
+    - General Testers
+    - Laptop/Desktop
+    - Mobile
+    - TV
+    - Components
+  - Sales
+    - Listers
+    - Wholesale
+    - Shipping
+    - Inventory
