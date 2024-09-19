@@ -1,0 +1,9 @@
+1. Remove SD card
+2. Hold SVC & Reset buttons
+3. Insert power
+4. When ERR light blinks rapidly, release buttons
+5. Display will show, among other things, the IP address
+   - Connect to interface
+   - If prompted, credentials are:
+      admin: `admin`
+      password: serial number (bottom sticker)
