@@ -4,7 +4,6 @@
 - PON
   - [Passive Optical Network](https://www.techtarget.com/searchnetworking/definition/passive-optical-network-PON)
 - Ethernet
-  - 
 - Power
   - 12VDC
 
